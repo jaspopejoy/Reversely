@@ -70,10 +70,11 @@
                     <h5 class="border-1 border-bottom border-success">Enter a string to Reverse</h5>
                     <form class="row gx-3 gy=2">
                         <div class="col">
-                            <input id="userString" type="text" class="form-control" placeholder="Enter A String" aria-label="Enter A String">
+                            <input id="userString" type="text" class="form-control" placeholder="Enter A String"
+                                aria-label="Enter A String">
                         </div>
                         <div class="col-12 p-2">
-                            <button type="button" id="submit" class="btn btn-success">Reverse Me</button>
+                            <button type="button" id="Submit" class="btn btn-success">Reverse Me</button>
                         </div>
                         <div class="alert alert-success mt-5 invisible fade show" id="alert" role="alert">
                             <h4 class="alert-heading">Well Done!</h4>
@@ -103,7 +104,7 @@
                         <div class="col social"><a href="https://www.linkedin.com/in/jason-popejoy/" target="_blank"><i
                                     class="fab fa-linkedin fa-2x"></i></a>
                         </div>
-                        <div class="col social"><a href="https://github.com/jaspopejoy" target="_blank"><i
+                        <div class="col social"><a href="https://github.com/jaspopejoy/Reversely" target="_blank"><i
                                     class="fab fa-github fa-2x"></i></a>
                         </div>
                     </div>
@@ -117,7 +118,11 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
         </script>
 
-    <scrip src="/js/site.js"></scrip>
+    <script src="/js/site.js"></script>
+
+    <script>
+        document.getElementById("Submit").addEventListener("click", getValues);
+    </script>
 
 </body>
 

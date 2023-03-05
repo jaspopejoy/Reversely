@@ -1,7 +1,7 @@
 
 // Get the string from the page
 //Conttoller function
-function getValue() {
+function getValues() {
 
     document.getElementById("alert").classList.add("invisible");
 
@@ -16,13 +16,14 @@ function getValue() {
 //logic function
 function reverseString(userString) {
 
-    let revString = [];
+    let revString = [];    
 
     //reverse a string using a for loop
+    //decrementing for loop
     for (let index = userString.length -1; index >= 0; index--) {
         revString += userString[index];        
-    }
-
+    }       
+    
     return revString;
 
 }
@@ -30,10 +31,10 @@ function reverseString(userString) {
 
 //Display the string to the user
 //View function
-function displayString(revString) {
+function displayString(revstring) {
 
     //write to the page
-    document.getElementById("msg").innerHTML = `Your String Reversed Is: ${revString}`;
+    document.getElementById("msg").innerHTML = `Your String Reversed Is: ${revstring}`;
     //show the alert box
-
+    document.getElementById("alert").classList.remove("invisible");
 }
