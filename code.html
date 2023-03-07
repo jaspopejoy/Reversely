@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Reversely: A Coding Project By Jason Popejoy</title>
+    <title>REVERSELY: A Coding Project By Jason Popejoy</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="/img/JPMark.jpg" class="d-inline-block align-text-top"
-                    alt="Jason Popejoy Logo" width="40" height="38"> Reversely</a>
+                    alt="Jason Popejoy Logo" width="40" height="38"> REVERSLEY</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link"" href="/index.html">Home</a>
+                        <a class="nav-link"" href=" /index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/app.html">The App</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"href="/code.html">The Code</a>
+                        <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="https://github.com/jaspopejoy/Counteri">Git Repo</a>
@@ -57,24 +57,78 @@
     <!-- Main Section -->
     <main class="flex-shrink-0">
         <div class="container py-5 px-5 mt-5">
-            <h2 class="border-1 border-bottom border-dark">The Code for Reversely.</h2>
+            <h2 class="border-1 border-bottom border-dark">The Code for REVERSELY.</h2>
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                        // Call Hello World
-                        function helloworld{
-                            alert("hello world");
+
+                        // Get the string from the page
+                        //Conttoller function
+                        function getValues() {
+                        
+                            document.getElementById("alert").classList.add("invisible");
+                        
+                            let userString = document.getElementById("userString").value;
+                        
+                            let revString = reverseString(userString);
+                        
+                            displayString(revString);
                         }
+                        
+                        //Reverse the string
+                        //logic function
+                        function reverseString(userString) {
+                        
+                            let revString = [];
+                        
+                            //reverse a string using a for loop
+                            //decrementing for loop
+                            for (let index = userString.length - 1; index >= 0; index--) {
+                                revString += userString[index];
+                            }
+                        
+                            return revString;
+                        
+                        }
+                        
+                        
+                        //Display the string to the user
+                        //View function
+                        function displayString(revstring) {
+                        
+                            //write to the page
+                            document.getElementById("msg").innerHTML = `Your String Reversed Is: ${revstring}`;
+                            //show the alert box
+                            document.getElementById("alert").classList.remove("invisible");
+                        }
+                        
                     </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays a message of "Hello World".</p>
+                    <p>The Code is structured in three functions.</p>
+
+                    <h5>getValues</h5>
+                    <p>getValues begins by checking that an alert is set to <strong>invisible</strong>. Utilizing
+                        <strong>getElementById</strong>, getValue pulls the user input from the page and stores it in
+                        the <strong>userString</strong> variable.
+                        The userString value is passed to the <strong>reverseString</strong>function. The function
+                        reverseString returns an array with the reversed string which is passed to the
+                        <strong>displayString</strong>function to be displayed to the user.
+                    </p>
+
+                    <h5>reverseString</h5>
+                    <p>reverseString takes the variable <strong>revString</strong>, created in the getValues function
+                        and
+                        uses it to hold an array. A for loop is used to reverse the string stored in userString and
+                        returns
+                        the reversed string to the getValues function.</p>
+
+                    <h5>displayString</h5>
+                    <p>displayString removes the invisible designation from the alert. A template literal is used to
+                        display the reversed string in the alert box to the user.</p>
                 </div>
             </div>
-        </div>
     </main>
 
     <!-- Footer Section-->
@@ -89,9 +143,14 @@
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
                     <div class="row">
-                        <div class="col social"><a href="https://www.linkedin.com/in/jason-popejoy/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <div class="col social"><a href="https://www.linkedin.com/in/jason-popejoy/" target="_blank"><i
+                                    class="fab fa-linkedin fa-2x"></i></a>
                         </div>
-                        <div class="col social"><a href="https://github.com/jaspopejoy/Reversely" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                        <div class="col social"><a href="https://twitter.com/jaspopejoy" target="_blank"><i
+                            class="fab fa-twitter fa-2x"></i></a>
+                        </div>
+                        <div class="col social"><a href="https://github.com/jaspopejoy/Reversely" target="_blank"><i
+                                    class="fab fa-github fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
